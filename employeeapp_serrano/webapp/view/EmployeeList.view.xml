@@ -1,0 +1,65 @@
+<mvc:View controllerName="sapips.training.employeeappserrano.controller.EmployeeList" xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table id="idEmployeesTable" mode="MultiSelect" items="{EmployeesModel>/Employee}">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <content>
+                            <Title text="Employees" level="H2" />
+                            <ToolbarSpacer />
+                            <SearchField ariaLabelledBy="text1" liveChange="_onSearchFieldLiveChange">
+                                <layoutData>
+                                    <OverflowToolbarLayoutData maxWidth="300px" shrinkable="true"
+                                        priority="NeverOverflow" />
+                                </layoutData>
+                            </SearchField>
+                            <Button text="Add" type="Transparent" press="onPressAddBtn" />
+                            <Button type="Reject" text="Delete" press="onPressDeleteBtn">
+                                <layoutData>
+                                    <OverflowToolbarLayoutData priority="NeverOverflow" />
+                                </layoutData>
+                            </Button>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column width="12em">
+                        <Text text="Employee ID" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="First Name" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Last Name" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Age" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Date of Hire" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Career Level" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Current Project" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem vAlign="Middle" type="Navigation" press="onItemPress">
+                        <cells>
+                            <Text text="{EmployeesModel>EmployeeID}" />
+                            <Text text="{EmployeesModel>FirstName}" />
+                            <Text text="{EmployeesModel>LastName}" />
+                            <Text text="{EmployeesModel>Age}" />
+                            <Text text="{EmployeesModel>DateHire}" />
+                            <Text text="{EmployeesModel>CareerLevel}" />
+                            <Text text="{EmployeesModel>CurrentProject}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

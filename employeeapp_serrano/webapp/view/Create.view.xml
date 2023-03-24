@@ -1,0 +1,39 @@
+<mvc:View controllerName="sapips.training.employeeappserrano.controller.Create" xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+    <Page id="CreatePage" title="{i18n>CreateTitle}">
+        <content>
+            <Panel id="idPanel1" headerText="Create Employee Record" class="sapUiResponsiveMargin" width="auto">
+                <form:SimpleForm id="idEmployeePersonal">
+                    <Label text="Employee ID" />
+                    <Input value="{EmployeeModel>EmployeeID}" required="true" />
+                    <Label text="First Name" />
+                    <Input value="{EmployeeModel>EmpFName}" required="true" />
+                    <Label text="Last Name" />
+                    <Input value="{EmployeeModel>EmpLLName}" required="true" />
+                    <Label text="Age" />
+                    <Input value="{EmployeeModel>EmpAge}" required="true" />
+                    <Label text="Hire Date" />
+                    <Input value="{EmployeeModel>EmpHrDt}" required="true" />
+                    <Label text="Career Level" />
+                    <Input value="{EmployeeModel>EmpCL}" required="true" />
+                    <Label text="Project Name" />
+                    <Input value="{EmployeeModel>EmpProj}" required="true" />
+                </form:SimpleForm>
+                <Panel id="idPanel2" headerText="Skills" class="sapUiResponsiveMargin" width="25%">
+                    <Label text="Skill Name" />
+                    <Input value="{SkillsModel>SkillsID}" required="true" />
+
+                    <Label text="Proficiency" />
+                    <Input value="{EmployeeModel>SkillProf1}" width="auto" required="true" />
+
+                    <Label text="Skill Name" />
+                    <Input value="{SkillsModel>Skills1ID}" />
+
+                    <Label text="Proficiency" />
+                    <Input value="{SkillsModel>SkillProf2}" width="auto" />
+                </Panel>
+            </Panel>
+
+        </content>
+    </Page>
+</mvc:View>

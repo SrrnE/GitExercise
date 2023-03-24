@@ -11,9 +11,6 @@ sap.ui.define([
         "use strict";
 
         return Controller.extend("navigationserrano.controller.Overview", {
-            onInit: function () {
-
-            },
             //Triggered whenever an Input has been changed
             //
             //oEvent - Event instance

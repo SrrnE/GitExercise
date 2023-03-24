@@ -1,0 +1,8 @@
+<mvc:View controllerName="sapips.training.employeeappserrano.controller.Detail" xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+    <Page id="DetailPage" title="{i18n>DetailTitle}">
+        <content>
+
+        </content>
+    </Page>
+</mvc:View>
